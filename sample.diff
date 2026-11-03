@@ -1,0 +1,12 @@
+diff --git a/src/auth.py b/src/auth.py
+index 4b1..7c2 100644
+--- a/src/auth.py
++++ b/src/auth.py
+@@ -1,3 +1,8 @@
++def login(email, password):
++    if not email or not password:
++        raise ValueError("credentials required")
++    return session.create(email, password)
++
+ def logout(session):
+     session.clear()
